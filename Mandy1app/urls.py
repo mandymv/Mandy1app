@@ -15,10 +15,10 @@ Including another URLconf
 """
 from django.contrib import admin
 from django.urls import path
-from Mandy1app.forms import *
+from .forms import *
 
 class Index(TemplateView):
-    template_name= "index.html"
+    template_name = "index.html"
 
 class FillOut(FormView):
     template_name = "form.html"
@@ -26,5 +26,5 @@ class FillOut(FormView):
 urlpatterns = [
     path('admin/', admin.site.urls),
     path('', NameForm.as_view(), name='form'),
-    path('', Index.as_view(),name='index'),
+    path('', Index.as_view(), name='index'),
 ]
