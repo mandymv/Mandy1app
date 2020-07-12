@@ -27,10 +27,6 @@ DEBUG = True
 
 ALLOWED_HOSTS = []
 
-STATICFILES_DIRS = [
-    "/Desktop/Fluxmaker/Mandy1app/static/",
-]
-
 # Application definition
 
 INSTALLED_APPS = [
