@@ -1,5 +1,9 @@
 from django.views.generic import TemplateView
 from django.views.generic import FormView
+from .forms import NameForm
+
+class Home(TemplateView):
+    template_name = "index.html"
 
 class FillOut(FormView):
     template_name = "form.html"
@@ -18,6 +22,3 @@ class FillOut(FormView):
             return self.form_valid(form)
         else:
             return self.form_invalid(form)
-
-class Home(TemplateView):
-    template_name = "index.html"
